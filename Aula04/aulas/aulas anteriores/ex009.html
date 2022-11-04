@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    <style>
+        #res {
+            margin-top: 20px;
+        }
+        h1{
+            background-color: green;
+            width: 330px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar nacionalidade</h1>
+    Nacionalidade: <input type="text" id="txtnac">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar(){
+            var txtn = window.document.querySelector('#txtnac')
+            var res = window.document.querySelector('#res')
+            var nac = String(txtn.value)
+            if (nac == 'Brasil') {
+                res.innerHTML = `<strong>Você é brasileiro</strong>.`
+                res.style.color = 'green'
+                res.style.background = 'yellow'
+                res.style.width = '130px'
+            }else {
+                res.innerHTML = `Você é estrangeiro e mora em ${nac}.`
+                res.style.color = 'black'
+                res.style.background = 'none'
+            }
+        }
+    </script>
+    
+</body>
+</html>
